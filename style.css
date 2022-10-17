@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+
+    background:linear-gradient(rgb(139, 73, 73),rgb(66, 73, 222),rgb(159, 25, 90));
+    background-position:center;
+     height: 100vh;
+}
+
+h3{
+    font-size: 50px;
+    padding: 1px 0; 
+    margin-top: 20px;
+    text-shadow: -2px 0 black,0 2px white,2px 0 white,0 -2px white;
+
+}
+
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    text-align:center;
+    padding: 70px 0;
+    position: relative;
+    margin-top: 5px;
+    text-shadow: -2px 0 black,0 2px white,2px 0 white,0 -2px white;
+
+}
+
+h1::after{
+    content: " ";
+    background: linear-gradient(skyblue,pink,blue);
+    width: 748px;
+    height: 72px;
+    position: absolute;
+    top: 32.8%;
+    left: 20.32%;
+    opacity: .8;
+    z-index: -1; /*behind text*/
+    box-shadow: 5px 5px 14px red,;
+}
+
+
+h1::selection{
+    background-color: rgb(252, 24, 195);
+    color: rgb(244, 247, 239);
+    text-shadow:-2px 0 black,0 2px ,black,2px 0,black,0 -2px black;
+}
+
+.container{
+    width: 400px;
+    height: 300px;
+    box-shadow: 2px 2px 6px black;
+    border-radius: 20px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-85%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition:width .7s,height .6s;
+}
+
+.container:hover{
+    width: 500px;
+    height: 305px;
+    box-shadow: 2px 2px 40px 30px  rgb(239, 232, 232);
+
+}
+
+.time{
+    text-align: center;
+
+} 
+.text{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 1.5rem .5rem;
+    text-shadow:-2px 0 rgb(184, 184, 60),0 2px ,rgb(136, 17, 17),2px 0,rgb(174, 188, 16),0 -2px rgb(216, 7, 199);
+    color: rgb(13, 13, 11);
+   
+}
+
+.time h4{
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgb(229, 11, 11);
+    margin-right: 15px;
+}
+
+audio{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 47%;
+    left: 47%;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 50%;
+    z-index:1;
+
+
+}
+
+
+
+.baloon,.baloon1{
+    position: fixed;
+    top: -1vh;
+    font-size: 20px;
+    transform: translateY(0);
+    animation:baloon 4s linear forwards;
+}
+
+.baloon1{
+right: 0;
+}
+
+@keyframes baloon{
+    tO{
+        transform:translateY(110vh);
+    }
+}
+
+
+
+.heart{
+    position: fixed;
+    top: -1vh;
+    font-size: 30px;
+    transform: translateY(0);
+    animation:baloon 3s linear alternate-reverse;
+}
